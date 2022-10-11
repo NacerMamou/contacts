@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
+import com.nmamou.contacts.pojo.Contact;
 import com.nmamou.contacts.repository.ContactRepository;
 
 @Service
@@ -19,5 +20,10 @@ public class ContactServiceImpl implements ContactService {
         .filter(index -> contactRepository.getContacts().get(index).getId().equals(id))
         .findFirst()
         .orElseThrow();
+  }
+
+  @Override
+  public Contact getContactById(String id){
+    return contactRepository.getContact(findIndexById(id));
   }
 }

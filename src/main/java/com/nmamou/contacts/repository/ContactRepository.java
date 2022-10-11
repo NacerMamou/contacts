@@ -10,9 +10,9 @@ import com.nmamou.contacts.pojo.Contact;
 @Repository
 public class ContactRepository {
   private List<Contact> contacts = Arrays.asList(
-    new Contact("123", "Jon Snow", "90"),
-    new Contact("124", "Jon Dow", "91"),
-    new Contact("125", "Jon Smile", "92")
+    new Contact("ref0", "Jon Snow", "06"),
+    new Contact("ref1", "Jon Dow", "07"),
+    new Contact("ref2", "Jon Smile", "08")
   );
 
     public List<Contact> getContacts() {
