@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-ContactsApplication<contacts>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.nmamou.contacts.ContactsApplication",
+      "projectName": "contacts",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

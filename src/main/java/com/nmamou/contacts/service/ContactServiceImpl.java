@@ -1,5 +1,6 @@
 package com.nmamou.contacts.service;
 
+import java.util.List;
 import java.util.stream.IntStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +26,23 @@ public class ContactServiceImpl implements ContactService {
   @Override
   public Contact getContactById(String id){
     return contactRepository.getContact(findIndexById(id));
+  }
+  @Override
+  public void saveContact(Contact contact){
+    contactRepository.saveContact(contact);
+  }
+  @Override
+  public List<Contact> getContacts(){
+    return contactRepository.getContacts();
+  }
+
+  @Override
+  public void updateContact(String id, Contact contact){
+    contactRepository.updateContact(findIndexById(id), contact);
+  }
+
+  @Override
+  public void deleteContact(String id){
+    contactRepository.deleteContact(findIndexById(id));
   }
 }
